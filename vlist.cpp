@@ -13,17 +13,17 @@
 using namespace std;
 
 // constructor
-Vlist::Vlist()
-{
+Vlist::Vlist(){
+    
     m_head = NULL;
 }
 
 // destructor
-Vlist::~Vlist()
-{
+Vlist::~Vlist(){
+    
     Node *ptr = m_head;
-    while(ptr != NULL)
-    {
+    while(ptr != NULL){
+        
         Node *temp;
         temp = ptr;
         ptr = ptr->m_next;
@@ -32,8 +32,8 @@ Vlist::~Vlist()
 }
 
 // checks through the list for the given title
-Video* Vlist::lookup(string title)
-{
+Video* Vlist::lookup(string title){
+    
     //exits if list is empty
     if(!m_head){
         return NULL;
@@ -49,32 +49,32 @@ Video* Vlist::lookup(string title)
 }
 
 // goes through the list and returns the length of it
-int Vlist::length()
-{
+int Vlist::length(){
+    
     int length = 0;
 
-    for (Node *ptr = m_head; ptr != NULL; ptr=ptr->m_next)
-    {
+    for (Node *ptr = m_head; ptr != NULL; ptr=ptr->m_next){
+        
         length++;
     }
     return length;
 }
 
 // prints the list
-void Vlist::print()
-{
+void Vlist::print(){
+    
     Node *ptr = m_head;
     // cycles through the list printing out the elements
-    while(ptr != NULL)
-    {
+    while(ptr != NULL){
+        
         ptr->m_video->print();
         ptr = ptr->m_next;
     }
 }
 
 // finds the given node target, removes it from the list
-bool Vlist::remove(string target)
-{
+bool Vlist::remove(string target){
+    
     // stops if list is empty
     if(m_head==NULL){
         
@@ -109,8 +109,8 @@ bool Vlist::remove(string target)
 }
 
 // inserts a node. Looks through for any null points in the list then inserts itself in there
-bool Vlist::insert(Video *video)
-{
+bool Vlist::insert(Video *video){
+    
     if(m_head == NULL){
         
         m_head = new Node(video, m_head);
