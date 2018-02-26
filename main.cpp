@@ -40,12 +40,15 @@ while(getline(cin,input)){
         cerr << "Title <" << title << "> not in list." << endl;
         }
       }else if( input == "length" ){
+         
         // shows the length of the list
         cout<<list.length()<<endl;
      }else if( input == "print"){
+         
         // prints the list
         list.print();
      }else if( input == "remove" ){
+         
         // removes a video from the list
         getline(cin, title);
         if ( !list.remove(title) ){
@@ -53,6 +56,7 @@ while(getline(cin,input)){
             cerr<<"Title <" <<title<< "> not in list, could not delete." << endl;
         }
     }else if ( input == "insert"){
+         
         // inserts a video into the list
         getline(cin,title);
         getline(cin,URL);
