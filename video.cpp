@@ -9,13 +9,13 @@
 
 using namespace std;
 
-// new name function
-string Video::name()
-{
+// gives name
+string Video::name(){
+    
     return m_name;
 }
 
-//this is where i declared the strings. it is the constructor function
+// used to declare values
 Video::Video (string name, string url, string comments, float length, int rating){
     
     m_name = name;
@@ -25,7 +25,7 @@ Video::Video (string name, string url, string comments, float length, int rating
     m_rating = rating;
 }
 
-//Prints out the Video's info
+// prints the video info
 void Video::print(){
     
     cout << m_name << ", " << m_url << ", " << m_comment << ", " << m_length << ", ";
@@ -59,6 +59,8 @@ bool Video::titleCheck(Video *tester){
     return m_name > tester->m_name;
 
 }
+
+// most of this stuff is copied over from project 2
 
 
 
