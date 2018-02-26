@@ -30,6 +30,7 @@ while(getline(cin,input)){
      if( input == "lookup" ){
         
         getline(cin, title);
+        // checks if the inputed title is already in the list
         Video *video = list.lookup(title);
         if(video){
             
@@ -39,20 +40,20 @@ while(getline(cin,input)){
         cerr << "Title <" << title << "> not in list." << endl;
         }
       }else if( input == "length" ){
-        
+        // shows the length of the list
         cout<<list.length()<<endl;
      }else if( input == "print"){
-        
+        // prints the list
         list.print();
      }else if( input == "remove" ){
-        
+        // removes a video from the list
         getline(cin, title);
         if ( !list.remove(title) ){
             
             cerr<<"Title <" <<title<< "> not in list, could not delete." << endl;
         }
     }else if ( input == "insert"){
-        
+        // inserts a video into the list
         getline(cin,title);
         getline(cin,URL);
         getline(cin,comments);
