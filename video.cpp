@@ -20,7 +20,7 @@ Video::Video (string name, string url, string comments, float length, int rating
     
     m_name = name;
     m_url = url;
-    m_comment = comment;
+    m_comment = comments;
     m_length = length;
     m_rating = rating;
 }
