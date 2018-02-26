@@ -18,6 +18,7 @@ int main(){
 // declaring my variables here
     Vlist list;
     float length;
+    int rating;
     string title;
     string comments;
     string input;
