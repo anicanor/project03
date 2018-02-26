@@ -27,7 +27,7 @@ class Vlist{
 
 
     private:
-        // class: node definition within the header file
+        // node definition
         class Node{
             
             public:
