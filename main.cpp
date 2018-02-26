@@ -19,7 +19,7 @@ int main(){
     Vlist list;
     float length;
     string title;
-    string comment;
+    string comments;
     string input;
     string URL;
     
@@ -54,11 +54,11 @@ while(getline(cin,input)){
         
         getline(cin,title);
         getline(cin,URL);
-        getline(cin,comment);
+        getline(cin,comments);
         cin>>length;
         cin>>rating;
         cin.ignore();
-        Video *new_video = new Video(title, URL, comment, length, rating);
+        Video *new_video = new Video(title, URL, comments, length, rating);
         // sends out an error if it's already in the list
         if (!list.insert(new_video)){
             
