@@ -16,8 +16,8 @@ string Video::name()
 }
 
 //this is where i declared the strings. it is the constructor function
-Video::Video (string name, string url, string comments, float length, int rating)
-{
+Video::Video (string name, string url, string comments, float length, int rating){
+    
     m_name = name;
     m_url = url;
     m_comment = comment;
