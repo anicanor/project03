@@ -31,8 +31,10 @@ class Vlist{
         class Node{
             
             public:
-                Node(Video *video, Node *next)
-                {m_video = video; m_next = next;}
+                Node(Video *video, Node *next){
+                    
+                    m_video = video; m_next = next;
+                }
                 Video *m_video;
                 Node *m_next;
         };
