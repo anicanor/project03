@@ -75,12 +75,11 @@ void Vlist::print(){
 // finds the given node target, removes it from the list
 bool Vlist::remove(string target){
     
-    // stops if list is empty
+    // this handles the header node. Checks if it's empty and, if not, adds in a 
     if(m_head==NULL){
         
         return false;
     }
-    // this checks the first element of the list to see if it's the target. If it is, it deletes it
     if( m_head->m_video->name()==target ){
         
         Node *tmp = m_head;
@@ -111,12 +110,13 @@ bool Vlist::remove(string target){
 // inserts a node. Looks through for any null points in the list then inserts itself in there
 bool Vlist::insert(Video *video){
     
+    // handles the header node. Looks to see if it's empty then adds a node
     if(m_head == NULL){
         
         m_head = new Node(video, m_head);
         return true;
     }
-    // handles the header node. This loop below stops any duplicates
+    // stops duplicates
     if( m_head->m_video->name() == video->name() ){
         
         return false;
